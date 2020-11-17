@@ -4,7 +4,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song.create(song_params(:name))
+    @song = Song.create(song_params(:name))
     redirect_to song_route(@song)
   end
 
