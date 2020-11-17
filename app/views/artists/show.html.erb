@@ -1,11 +1,11 @@
 <h1>My Artist</h1>
 
 <%= form_for @artist do |f| %>
-  <%= f.label :artist_name %>
+  <%= f.label :name %>
   <%= f.text_field :name %><br>
 
   <p>My artist bio</p>
-    <%= f.label :artist_bio %>
+    <%= f.label :bio %>
     <%= f.text_area :bio %>
 
 <% end %>
