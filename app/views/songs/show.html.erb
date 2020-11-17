@@ -1,13 +1,4 @@
-<h1>@song.name</h1>
+<h1><%= @song.name %></h1>
 
-<%= form_for @song do |f| %>
-  <%= f.label :song_name %>
-  <%= f.text_field :name %><br>
-
-  <%= f.label :song_artist_id %>
-  <%= f.number_field link_to :artist_id, artist_path(Artist.find(artist_id)) %>
-
-  <%= f.label :song_genre_id %>
-  <%= f.number_field link_to :genre_id. genre_path(Genre.find(genre_id)) %>
-
-<% end %>
+<p>Artist: <%= link_to @song.artist.name, artist_path(@song.artist)  %></p>
+<p>Genre:<%= link_to @song.genre.name, genre_path(@song.genre) %></p>
