@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist.create(artist_params(:name, :bio))
+    @artist = Artist.create(artist_params(:name, :bio))
     redirect_to artist_route(@artist)
   end
 
